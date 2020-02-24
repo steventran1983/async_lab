@@ -19,3 +19,6 @@ getJson(urlCat,(error,result) =>{
         console.log("saved");
     })
 })
+
+
+

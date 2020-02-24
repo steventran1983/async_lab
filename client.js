@@ -34,3 +34,15 @@ plus(6,2,(error,ketqua)=>{
         console.log(ketqua.result);
     }) 
 })
+
+
+function addPromise(num1,num2){
+    return new Promise((resolve,reject)=>{
+        let URL = `http://localhost:3000/add/${num1}/${num2}`;
+        request(URL,(error,res,body)=>{
+            if(error) return reject(error.message);
+            return resolve(JSON.parse(body).result)
+        })
+    })
+}
+
